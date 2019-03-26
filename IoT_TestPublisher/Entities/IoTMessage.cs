@@ -8,7 +8,7 @@ namespace IoT_TestPublisher.Entities
     {
         public string DeviceId { get; set; }
         public DateTime TimeStamp { get; set; }
-        public IoTStatus Status { get; set; }
+        public string Status { get; set; }
         public string message { get; set; }
     }
 

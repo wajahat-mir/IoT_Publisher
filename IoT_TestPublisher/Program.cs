@@ -11,8 +11,8 @@ namespace IoT_TestPublisher
 {
     class Program
     {
-        const string ServiceBusConnectionString = "<your_connection_string>";
-        const string QueueName = "<your_queue_name>";
+        const string ServiceBusConnectionString = "Endpoint=sb://iotmsgsrvbus.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=yfEoy/S3t9v6vNc6s4owP06WHpnCbPV+shMe/bVPoHM=";
+        const string QueueName = "iotmsgs";
         static IQueueClient queueClient;
 
         static void Main(string[] args)
@@ -47,7 +47,7 @@ namespace IoT_TestPublisher
                     {
                         DeviceId = "000-000-00" + i.ToString(),
                         TimeStamp = DateTime.Now,
-                        Status = IoTStatus.Alive,
+                        Status = IoTStatus.Alive.ToString(),
                         message = "Testing Message " + i.ToString()
                     };
                     // Create a new message to send to the queue.
